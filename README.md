@@ -10,8 +10,6 @@ Este ransomware está escrito únicamente para utilizarlo en entornos académico
       <li>La key con la que se van a cifrar los archivos
       <li>El texto de un banner que se generara en el escritorio indicando que se han cifrado los archivos.
     </OL>
-![image](https://user-images.githubusercontent.com/70807950/208301136-879cd4e9-3d3b-49d2-a839-69100cf2bbbe.png)<br/>
-
   <li>El archivo .py que contiene el código ejecutable:
     <OL>	
       <li>Instala las librerías
