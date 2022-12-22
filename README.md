@@ -8,7 +8,7 @@ Uso exclusivo para estudiantes y bajo entornos controlados.<br/>
 <ol>
   <li>Un archivo data_ransomware.txt donde podremos modificar 3 parámetros:<br/>
     <OL>	
-      <li>El directorio donde se va a ejecutar el ransomware.(Solo path relativo para evitar errores)
+      <li>El directorio donde se va a ejecutar el ransomware. (Solo path relativo para evitar errores)
       <li>La key con la que se van a cifrar los archivos. Tambien se pueden generar nuevas claves utiliando Fernet.generate_key().
       <li>El texto de un banner que se generara en el escritorio indicando que se han cifrado los archivos.
     </OL>
